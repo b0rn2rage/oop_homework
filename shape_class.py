@@ -6,7 +6,7 @@ class Shapes(ABC):
     def __init__(self, name):
         self.name = name
         self.figure = None
-        self.angles = None
+        self.ANGLES = None
 
     @abstractmethod
     def perimeter(self):
@@ -22,3 +22,9 @@ class Shapes(ABC):
             return sum_area
         else:
             return "В качестве аргумента figure был передан неправильный класс"
+
+    def get_name(self):
+        return self.name
+
+    def get_number_of_angles(self):
+        return self.ANGLES
